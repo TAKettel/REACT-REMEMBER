@@ -81,5 +81,6 @@ class App extends Component {
 //    Get the score to display and update appropriately. Issue: Communicating between App and StickyHeader.
 //    Shuffle the characters on the page. Issue: Communicating between the indexesArray and the mapping.
 //    Restart game once completed (and maybe congratulate if they hit the max?). DONE.
+//    Correctly deploying to GitPages. Issue: Currently only showing my initial README.md.
 
 export default App;
