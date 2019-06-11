@@ -4,10 +4,10 @@ import "./index.css";
 function Title(props) {
   return (
     <ul className="nav nav-tabs navbar-fixed-top">
-      <li className="nav-item">
+      <li className="gameName">
         It's all in the mind!
       </li>
-      <li className="nav-item">
+      <li className="scoreArea">
         Score: {props.score}
       </li>
     </ul>

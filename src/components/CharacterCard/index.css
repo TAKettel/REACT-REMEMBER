@@ -12,12 +12,17 @@ code {
     monospace;
 }
 
+.card {
+  background-color: #a01e42
+}
+
 .img-container {
   height: 200px;
   width: 200px;
   border-style: ridge;
   border-width: 5px;
   margin: 5px;
+  background-color: whitesmoke
 }
 
 .characterImage {

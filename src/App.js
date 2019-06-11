@@ -9,11 +9,14 @@ import './App.css';
 class App extends Component {
   state = {
     characters,
+    score: 0,
   };
 
   characterArray = [];
   indexesArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-  score = 0;
+
+
+  // score = 0;
 
   checkForDupe = id => {
     // console.log(this.characterArray);
@@ -26,6 +29,9 @@ class App extends Component {
       } else {
       //  ... else add to the array to be checked next time.
         this.characterArray.push(id);
+        this.setState(prevState => {
+          return {score: prevState.score + 1}
+        })
         console.log(this.characterArray);
         this.render();
       }
@@ -33,7 +39,7 @@ class App extends Component {
 
   gameover() {
     this.characterArray = [];
-    this.score = 0;
+    this.setState({score: 0});
     this.render();
   }
 
@@ -50,13 +56,32 @@ class App extends Component {
     return indexesArray;
   };
 
+  // https://gist.github.com/ecarter/1423674
+  mapOrder(array, order, key){
+    array.sort( function (a, b) {
+      var A = a[key], B = b[key];
+      
+      if (order.indexOf(A) > order.indexOf(B)) {
+        return 1;
+      } else {
+        return -1;
+      }
+      
+    });
+    
+    return array;
+  }
+
   render() {
-    this.shuffle(this.characters);
+    // this.shuffle(this.characters);
+    this.shuffle(this.indexesArray);
+    this.mapOrder(characters, this.indexesArray, 'id')
     return (
       <Wrapper>
-        <StickyHeader score={this.score}/>
-        {console.log(this.indexesArray)}
-        {console.log(this.score)}
+        <StickyHeader score={this.state.score}/>
+        {console.log(this.state.score)}
+        <div className="row">
+        {/* Why aren't the Bootstrap grid elements working?  Is there something else I need to do to get a max 4-col character set? */}
         <CharacterBlock>
         {/* Randomizing the INDEX of the array elements. Generate an array of indexes, then switch and swap. 
         Not sure that I'm doing this right just yet, or how to get the shuffled index to talk to the mapping. */}
@@ -70,6 +95,7 @@ class App extends Component {
           />
         ))}
         </CharacterBlock>
+        </div>
       </Wrapper>
     );
   }
@@ -78,9 +104,9 @@ class App extends Component {
 // Things that still need to happen:
 //    Get the navbar to not margin-move with the cards, and have the navbar show on top. Z-index helps with the second part, at least. DONE.
 //    Check if character array contains the character added.  DONE.
-//    Get the score to display and update appropriately. Issue: Communicating between App and StickyHeader.
-//    Shuffle the characters on the page. Issue: Communicating between the indexesArray and the mapping.
-//    Restart game once completed (and maybe congratulate if they hit the max?). DONE.
-//    Correctly deploying to GitPages. Issue: Currently only showing my initial README.md.
+//    Get the score to display and update appropriately. ISSUE: Communicating between App and StickyHeader. DONE.
+//    Shuffle the characters on the page. ISSUE: Communicating between the indexesArray and the mapping. DONE.
+//    Restart game once completed (and maybe congratulate if they hit the max?). Not quite...
+//    Correctly deploying to GitPages. ISSUE: Currently only showing my initial README.md.
 
 export default App;
