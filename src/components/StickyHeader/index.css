@@ -18,7 +18,7 @@ code {
   right: 0;
   left: 0;
   z-index: 3;
-  background-color: #396c6f;
+  background-image: linear-gradient(to bottom right, #99dee0 10%, #396c6f 90%);
 }
 
 .gameName {

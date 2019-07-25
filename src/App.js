@@ -19,8 +19,6 @@ class App extends Component {
   // score = 0;
 
   checkForDupe = id => {
-    // console.log(this.characterArray);
-    // console.log(id)
     //  i'm calling id and then calling it again inside the forEach, I need to ask if this works, or why it dosen't.    
       //  if the new id is already in the array... game over.
       if(this.characterArray.includes(id)) {

@@ -13,7 +13,8 @@ code {
 }
 
 .card {
-  background-color: #a01e42
+  background-color: rgba(160,30,66, .6);
+
 }
 
 .img-container {
@@ -22,10 +23,10 @@ code {
   border-style: ridge;
   border-width: 5px;
   margin: 5px;
-  background-color: whitesmoke
+  background-color: whitesmoke;
 }
 
 .characterImage {
   height: 200px;
-  width: 200px
+  width: 200px;
 }
