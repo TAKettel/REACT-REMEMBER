@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-remember/static/css/main.a2ef995a.chunk.css",
-    "main.js": "/react-remember/static/js/main.4db0bee9.chunk.js",
-    "main.js.map": "/react-remember/static/js/main.4db0bee9.chunk.js.map",
+    "main.css": "/react-remember/static/css/main.6f1081d8.chunk.css",
+    "main.js": "/react-remember/static/js/main.36f39103.chunk.js",
+    "main.js.map": "/react-remember/static/js/main.36f39103.chunk.js.map",
     "runtime~main.js": "/react-remember/static/js/runtime~main.9dc561ba.js",
     "runtime~main.js.map": "/react-remember/static/js/runtime~main.9dc561ba.js.map",
     "static/js/2.884c28c3.chunk.js": "/react-remember/static/js/2.884c28c3.chunk.js",
     "static/js/2.884c28c3.chunk.js.map": "/react-remember/static/js/2.884c28c3.chunk.js.map",
     "index.html": "/react-remember/index.html",
-    "precache-manifest.3a4e27c6eedef6beb71121d6a644cc5e.js": "/react-remember/precache-manifest.3a4e27c6eedef6beb71121d6a644cc5e.js",
+    "precache-manifest.3ee8644f02f820ea8bd79c0a0cbc87a6.js": "/react-remember/precache-manifest.3ee8644f02f820ea8bd79c0a0cbc87a6.js",
     "service-worker.js": "/react-remember/service-worker.js",
-    "static/css/main.a2ef995a.chunk.css.map": "/react-remember/static/css/main.a2ef995a.chunk.css.map"
+    "static/css/main.6f1081d8.chunk.css.map": "/react-remember/static/css/main.6f1081d8.chunk.css.map"
   }
 }
