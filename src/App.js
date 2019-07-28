@@ -72,11 +72,10 @@ class App extends Component {
     this.shuffle(this.indexesArray);
     this.mapOrder(characters, this.indexesArray, "id");
     return (
-      <Wrapper>
+      <Wrapper style={this.backStyle}>
         <StickyHeader score={this.state.score} />
         {console.log(this.state.score)}
         <div className="row">
-          {/* Why aren't the Bootstrap grid elements working?  Is there something else I need to do to get a max 4-col character set? */}
           <CharacterBlock>
             {/* Randomizing the INDEX of the array elements. Generate an array of indexes, then switch and swap. 
         Not sure that I'm doing this right just yet, or how to get the shuffled index to talk to the mapping. */}
@@ -95,13 +94,5 @@ class App extends Component {
     );
   }
 }
-
-// Things that still need to happen:
-//    Get the navbar to not margin-move with the cards, and have the navbar show on top. Z-index helps with the second part, at least. DONE.
-//    Check if character array contains the character added.  DONE.
-//    Get the score to display and update appropriately. ISSUE: Communicating between App and StickyHeader. DONE.
-//    Shuffle the characters on the page. ISSUE: Communicating between the indexesArray and the mapping. DONE.
-//    Restart game once completed (and maybe congratulate if they hit the max?). Not quite...
-//    Correctly deploying to GitPages. ISSUE: Currently only showing my initial README.md.
 
 export default App;
