@@ -1,5 +1,4 @@
 # It's All in the Mind
-https://takettel.github.io/react-remember/
 
 A React app memory game built around characters from the Parappa the Rapper series of rhythm video games.
 
